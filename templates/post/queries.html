@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Publicaciones por autor que la inicial de su nombre empieza por A</h1>
+  <ol>
+    {% for elm in filtered %}
+      <li>{{ elm.name }} ({{ elm.email }})</li>
+    {% endfor %}
+  </ol>  
+
+  <h1>Todo los autores</h1>
+  <ol>
+    {% for author in authors %}
+      <li>{{ author.name }} ({{ author.email }})</li>
+    {% endfor %}
+  </ol>
+  <h1>Todas las publicaciones existentes: {{ authors|length }}</h1>
+</body>
+</html>
